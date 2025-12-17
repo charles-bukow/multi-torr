@@ -51,9 +51,9 @@ function getQualitySymbol(quality) {
     if (qualityStr.includes('2160') || qualityStr.includes('4k') || qualityStr.includes('uhd')) {
         return '💨'; // 4K/UHD content
     } else if (qualityStr.includes('1080')) {
-        return '🎛️'; // Full HD
+        return '🔥'; // Full HD
     } else if (qualityStr.includes('720')) {
-        return '🁬'; // HD
+        return '⭐'; // HD
     } else if (qualityStr.includes('480')) {
         return '⛃'; // SD
     } else if (qualityStr.includes('cam') || qualityStr.includes('hdts')) {
@@ -118,8 +118,8 @@ app.get('/manifest.json', (req, res) => {
     const manifest = {
         id: 'org.magnetio.raw',
         version: '1.0.0',
-        name: 'HYIO Raw Torrents',
-        description: 'Stream movies and series via raw magnet links - Scraper backend for CF Worker',
+        name: 'HYIO p2p',
+        description: 'Stream movies and series via raw magnet links - HY Addons',
         resources: ['stream'],
         types: ['movie', 'series'],
         idPrefixes: ['tt', 'tmdb'],
@@ -361,7 +361,7 @@ app.get('/stream/:type/:id.json', async (req, res) => {
 app.get('/health', (req, res) => {
     res.json({
         status: 'OK',
-        service: 'HYIO Scraper Backend',
+        service: 'HYIO p2p',
         version: '1.0.0',
         sources: Object.values(STREAM_SOURCES).map(s => s.name),
         timestamp: new Date().toISOString()
