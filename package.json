@@ -1,0 +1,25 @@
+{
+  "name": "debrid-streams",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "fastindex.js",
+  "scripts": {
+    "start": "node fasterindex.js",
+    "dev": "nodemon fasterindex.js"
+  },
+  "dependencies": {
+    "async-lock": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "@types/bun": "latest"
+  },
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
